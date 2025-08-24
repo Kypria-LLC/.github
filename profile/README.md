@@ -4,7 +4,7 @@
 **Realm:** Roseville, Michigan, USA  
 **Crest‑Mark:** ORCID [0009‑0009‑6811‑5799](https://orcid.org/0009-0009-6811-5799)  
 
----
+
 
 ## ✨ Our Charge
 We forge a canon where **every commit is a crest**,  
