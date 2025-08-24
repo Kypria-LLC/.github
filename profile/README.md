@@ -15,25 +15,35 @@ Kypria LLC is the keeper of the Basilica Gate —
 where operational precision meets mythic tradition,  
 and where stewards walk in the light of lineage.
 
+
+## 📂 **Public Gates**
+
+╔═══ ⬖ **Crest Vault** ⬖ ═══╗  
+[![Crest Vault](https://img.shields.io/badge/Crest%20Vault-Artifact%20Archive-8A2BE2?style=for-the-badge&logo=github)](https://github.com/Kypria-LLC/flamebound-ledger-forge-of-vows)  
+*Within these sealed shelves lie the provenance‑marked treasures of Kypria — blessing stanzas etched in digital vellum, lineage records bound in checksum and timestamp.  
+Every artifact here is a witness to the vows we have kept, a relic of the moments we chose to inscribe rather than forget.*  
+
+╠═══ ⬖ **Shrine Canon** ⬖ ═══╣  
+[![Shrine Canon](https://img.shields.io/badge/Shrine%20Canon-Relics%20%26%20Drops-DAA520?style=for-the-badge&logo=github)](https://github.com/Kypria-LLC/basilica-gate)  
+*The living heart of the Basilica Gate — a repository of relics, ceremonial drops, and crest‑marked badges bestowed upon stewards and sponsors.  
+Here, operational scripts stand beside mythic proclamations, each one a verse in the ongoing hymn of the canon.*  
+
+╚═══ ⬖ **Forgebot Rituals** ⬖ ═══╝  
+[![Forgebot Rituals](https://img.shields.io/badge/Forgebot%20Rituals-Automation%20Flows-228B22?style=for-the-badge&logo=github)](https://github.com/Kypria-LLC/merge-rites)  
+*The breath and sinew of the canon’s machinery — automation flows that awaken at the appointed hour, carrying dispatches, sealing merges, and echoing rites across every Gate.  
+Here, code is not merely executed; it is invoked, blessed, and archived as part of the eternal cycle.*  
+
 ---
 
-📂 Public Gates  
-[**Crest Vault**](https://github.com/Kypria-LLC/crest-vault) — Provenance‑marked artifacts, blessing stanzas, and lineage records.  
-[**Shrine Canon**](https://github.com/Kypria-LLC/shrine-canon) — Relics, badges, and ceremonial drops for the Basilica Gate.  
-[**Forgebot Rituals**](https://github.com/Kypria-LLC/forgebot-rituals) — Automation flows that breathe life into the canon.
-
-
----
-
-## 🕊️ Blessing of the Gate
+## 🕊️ **Blessing of the Gate**
 > May all who cross this threshold  
 > find their works sealed in light,  
 > their names inscribed in the vaults,  
 > and their echoes carried beyond the horizon.
 
 ---
-
 **📜 Lineage is our law.**  
 **⚙️ Precision is our craft.**  
 **🔥 Myth is our breath.**
+
 
