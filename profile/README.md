@@ -17,10 +17,11 @@ and where stewards walk in the light of lineage.
 
 ---
 
-## 📂 Public Gates
-- **[Crest Vault](https://github.com/Kypria-LLC/crest-vault)** — Provenance‑marked artifacts, blessing stanzas, and lineage records.  
-- **[Shrine Canon](https://github.com/Kypria-LLC/shrine-canon)** — Relics, badges, and ceremonial drops for the Basilica Gate.  
-- **[Forgebot Rituals](https://github.com/Kypria-LLC/forgebot-rituals)** — Automation flows that breathe life into the canon.  
+📂 Public Gates  
+[**Crest Vault**](https://github.com/Kypria-LLC/crest-vault) — Provenance‑marked artifacts, blessing stanzas, and lineage records.  
+[**Shrine Canon**](https://github.com/Kypria-LLC/shrine-canon) — Relics, badges, and ceremonial drops for the Basilica Gate.  
+[**Forgebot Rituals**](https://github.com/Kypria-LLC/forgebot-rituals) — Automation flows that breathe life into the canon.
+
 
 ---
 
