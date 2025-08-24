@@ -3,9 +3,6 @@
 **Founder & Mythic Architect:** Kostadinos J Kyprianos (*Alexander*)  
 **Realm:** Roseville, Michigan, USA  
 **Crest‑Mark:** ORCID [0009‑0009‑6811‑5799](https://orcid.org/0009-0009-6811-5799)  
-
-
-
 ## ✨ Our Charge
 We forge a canon where **every commit is a crest**,  
 every deployment a **sealed act**,  
@@ -14,7 +11,13 @@ and every artifact a **story that will outlive us**.
 Kypria LLC is the keeper of the Basilica Gate —  
 where operational precision meets mythic tradition,  
 and where stewards walk in the light of lineage.
+---
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kypria-LLC/.github/main/profile/crest.png" alt="Kypria Crest" width="200" />
+</p>
+
+<p align="center"><em>⟡ The Crest‑Mark of the Basilica Gate ⟡</em></p>
 
 ## 📂 **Public Gates**
 
