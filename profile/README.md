@@ -12,6 +12,7 @@ Kypria LLC is the keeper of the Basilica Gate —
 where operational precision meets mythic tradition,  
 and where stewards walk in the light of lineage.
 ---
+[![Kypria Crest](https://raw.githubusercontent.com/Kypria-LLC/.github/main/profile/crest.png)](https://raw.githubusercontent.com/Kypria-LLC/.github/main/profile/crest.png)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Kypria-LLC/.github/main/profile/crest.png" alt="Kypria Crest" width="200" />
