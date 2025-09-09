@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1500"
+  height="640"
+  viewBox="0 0 1500 640"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+>
+  <title>Kypria Minimal Safe-Zone Overlay (Dual-Purpose GitHub + Twitter/X Banner)</title>
+  <desc>
+    Transparent overlay with four guide rectangles:
+    1. Full Canvas Outline (1500x640, #CCCCCC, 2px)
+    2. GitHub Safe Width (1120x640 centered horizontally, #4DA3FF, 2px)
+    3. Twitter/X Safe Height (1500x400 centered vertically, #4DFF88, 2px)
+    4. Shared Safe Zone (1120x400 centered both axes, #FFD700, 3px)
+    No fills, no labels.
+  </desc>
+
+  <defs>
+    <style>
+      .no-fill { fill: none; }
+      .outline { stroke: #CCCCCC; stroke-width: 2; }
+      .github-safe { stroke: #4DA3FF; stroke-width: 2; }
+      .twitter-safe { stroke: #4DFF88; stroke-width: 2; }
+      .shared-safe { stroke: #FFD700; stroke-width: 3; }
+    </style>
+  </defs>
+
+  <g id="safe-zone-guides" shape-rendering="crispEdges">
+    <rect id="full-canvas-outline" class="no-fill outline" x="0" y="0" width="1500" height="640" />
+    <rect id="github-safe-width" class="no-fill github-safe" x="190" y="0" width="1120" height="640" />
+    <rect id="twitter-safe-height" class="no-fill twitter-safe" x="0" y="120" width="1500" height="400" />
+    <rect id="shared-safe-zone" class="no-fill shared-safe" x="190" y="120" width="1120" height="400" />
+  </g>
+
+  <g id="safe-zone-guides_inset-stroke" display="none" shape-rendering="crispEdges">
+    <rect id="full-canvas-outline-inset" class="no-fill outline" x="1" y="1" width="1498" height="638" />
+    <rect id="github-safe-width-inset" class="no-fill github-safe" x="190" y="0" width="1120" height="640" />
+    <rect id="twitter-safe-height-inset" class="no-fill twitter-safe" x="0" y="120" width="1500" height="400" />
+    <rect id="shared-safe-zone-inset" class="no-fill shared-safe" x="190" y="120" width="1120" height="400" />
+  </g>
+</svg>
