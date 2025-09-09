@@ -1,0 +1,30 @@
+meta:
+  version: 0.1.2
+  updated: 2025-09-08
+  scope: visual-identity
+  governance: CONTRIBUTING-DESIGN.md
+
+colors:
+  parchment: "#F8F1E1"
+  gold: "#D4AF37"
+  deep_violet: "#4B2E83"
+  dark_brown: "#3B2F2F"
+
+typography:
+  title_font: "Cinzel Decorative, serif"
+  body_font: "EB Garamond, serif"
+  min_body_size_px: 16
+  min_heading_size_px: 20
+
+effects:
+  crest_opacity_percent: "8-12"
+  emboss: true
+  gold_glow:
+    color: "#D4AF37"
+    opacity: 0.10
+    spread_px: 15
+
+accessibility:
+  min_contrast_ratio_AA: 4.5
+  min_contrast_ratio_AAA: 7.0
+  appendix_ref: "design/accessibility-contrast-audit.md"

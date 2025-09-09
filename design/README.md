@@ -3,7 +3,7 @@
 © Kypria LLC — Stewardship in Perpetuity.  
 Status: Draft (pending ratification)  
 Document Class: Canonical Design Operations Reference  
-Version: 0.1.1 (proposed)  
+Version: 0.1.2 (active)  
 
 ---
 
@@ -27,6 +27,9 @@ Key Enforcement Points:
 3. Gold (#FFD700) may not be used for primary body text on parchment unless outline or backing plate ensures effective contrast  
 4. Motion / shimmer effects (future) must include reduced-motion fallback  
 5. All new palette proposals require luminance & contrast table in PR  
+
+## Appendix E — Accessibility & Contrast Audit
+See [design/accessibility-contrast-audit.md](accessibility-contrast-audit.md)
 
 ---
 
