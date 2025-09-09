@@ -1,28 +1,28 @@
 # Kypria Dual‑Purpose Banner Safe‑Zone Overlay — Build Instructions
 
-This overlay file is used as a construction guide when designing the dual‑purpose (GitHub + Twitter/X) banner. It should NEVER be flattened into the final artwork—only placed above it during layout, then hidden before export.
+This overlay file is used as a construction guide when designing the dual‑purpose (GitHub + Twitter/X) banner. It should NEVER be flattened into the final artwork—only placed above it during la...
 
 ---
 
 ## 1. Canvas
 
 | Property | Value |
-|----------|-------|
-| Dimensions | 1500 × 640 px |
-| Background | Fully transparent |
-| Color Mode | RGB |
-| Resolution (master source) | 300 DPI (export PNG can be 72–96 DPI equivalent) |
+| |----------|-------|
+| | Dimensions | 1500 × 640 px |
+| | Background | Fully transparent |
+| | Color Mode | RGB |
+| | Resolution (master source) | 300 DPI (export PNG can be 72–96 DPI equivalent) |
 
 ---
 
 ## 2. Rectangles (Guides)
 
 | Guide Name | Size (W×H) | Position (Top‑Left X,Y) | Stroke | Color | Notes |
-|------------|------------|--------------------------|--------|-------|-------|
-| Full Canvas Border | 1500 × 640 | 0,0 | 2 px | #CCCCCC | Outer frame |
-| GitHub Safe Width | 1120 × 640 | 190,0 | 2 px | #4DA3FF | GitHub crops width only; full height used |
-| Twitter/X Safe Height | 1500 × 400 | 0,120 | 2 px | #4DFF88 | Twitter/X may crop vertical edges on some displays |
-| Shared Safe Zone | 1120 × 400 | 190,120 | 3 px | #FFD700 | Place ALL semantic elements here |
+| |------------|------------|--------------------------|--------|-------|-------|
+| | Full Canvas Border | 1500 × 640 | 0,0 | 2 px | #CCCCCC | Outer frame |
+| | GitHub Safe Width | 1120 × 640 | 190,0 | 2 px | #4DA3FF | GitHub crops width only; full height used |
+| | Twitter/X Safe Height | 1500 × 400 | 0,120 | 2 px | #4DFF88 | Twitter/X may crop vertical edges on some displays |
+| | Shared Safe Zone | 1120 × 400 | 190,120 | 3 px | #FFD700 | Place ALL semantic elements here |
 
 Coordinate math:
 - Horizontal side margin for 1120 width: (1500 − 1120)/2 = 190 px (left & right)
@@ -33,11 +33,11 @@ Coordinate math:
 ## 3. Labels
 
 | Target | Text |
-|--------|------|
-| Full Canvas Border | “Full Canvas — 1500×640” |
-| GitHub Safe Width | “GitHub Safe Width — 1120 px” |
-| Twitter/X Safe Height | “Twitter/X Safe Height — 400 px” |
-| Shared Safe Zone | “Shared Safe Zone — 1120×400 px” |
+| |--------|------|
+| | Full Canvas Border | “Full Canvas — 1500×640” |
+| | GitHub Safe Width | “GitHub Safe Width — 1120 px” |
+| | Twitter/X Safe Height | “Twitter/X Safe Height — 400 px” |
+| | Shared Safe Zone | “Shared Safe Zone — 1120×400 px” |
 
 Style:
 - Font: Arial
@@ -61,11 +61,11 @@ Optional: Put each rectangle in a named layer prefix: `GUIDE/…`
 ## 5. Opacity & Visual Hierarchy
 
 | Guide | Recommended Opacity |
-|-------|---------------------|
-| Shared Safe Zone | 100% stroke |
-| Twitter/X Safe Height | 80% stroke |
-| GitHub Safe Width | 70% stroke |
-| Full Canvas Border | 50–60% stroke |
+| |-------|---------------------|
+| | Shared Safe Zone | 100% stroke |
+| | Twitter/X Safe Height | 80% stroke |
+| | GitHub Safe Width | 70% stroke |
+| | Full Canvas Border | 50–60% stroke |
 
 Do NOT add fills—keep interior fully transparent.
 
@@ -74,11 +74,11 @@ Do NOT add fills—keep interior fully transparent.
 ## 6. Export
 
 | Parameter | Value |
-|-----------|-------|
-| File name | Kypria_SafeZone_Overlay.png |
-| Format | PNG (preserve transparency) |
-| Compression | Lossless |
-| Background | None (alpha fully transparent) |
+| |-----------|-------|
+| | File name | Kypria_SafeZone_Overlay.png |
+| | Format | PNG (preserve transparency) |
+| | Compression | Lossless |
+| | Background | None (alpha fully transparent) |
 
 ---
 
@@ -98,11 +98,11 @@ Do NOT add fills—keep interior fully transparent.
 ## 8. Figma / Affinity / Photoshop Coordinates
 
 | Layer Name | X | Y | W | H |
-|------------|---|---|---|---|
-| guide/full-canvas | 0 | 0 | 1500 | 640 |
-| guide/github-width | 190 | 0 | 1120 | 640 |
-| guide/twitter-height | 0 | 120 | 1500 | 400 |
-| guide/shared-safe | 190 | 120 | 1120 | 400 |
+| |------------|---|---|---|---|
+| | guide/full-canvas | 0 | 0 | 1500 | 640 |
+| | guide/github-width | 190 | 0 | 1120 | 640 |
+| | guide/twitter-height | 0 | 120 | 1500 | 400 |
+| | guide/shared-safe | 190 | 120 | 1120 | 400 |
 
 Figma stroke alignment: Center.
 
@@ -169,6 +169,25 @@ KYPRIA_SAFEZONE_OVERLAY_SPEC:
   last_audit: pending
   purpose: dual-purpose banner construction guide
 ```
+
+---
+
+## 13. Safe‑Zone Color Legend
+
+| Guide Layer | Purpose | Stroke Color | Hex Code | Stroke Width |
+|-------------|---------|--------------|----------|--------------|
+| Full Canvas Outline | Defines total working area (1500×640 px) | Light Grey | `#CCCCCC` | 2 px |
+| GitHub Safe Width | GitHub preview width (1120 px); outside may crop | Light Blue | `#4DA3FF` | 2 px |
+| Twitter/X Safe Height | Twitter/X banner height (400 px); top/bottom outside may crop | Light Green | `#4DFF88` | 2 px |
+| Shared Safe Zone | Overlap (1120×400 px); all critical elements must be inside | Gold | `#FFD700` | 3 px |
+
+### Usage Tips
+- Opacity: Keep strokes at 100% while designing (no fills).
+- Layer Order: Place Shared Safe Zone (gold) above other guides so it remains visible.
+- Lock Guides: Lock all guide layers once positioned to prevent drift.
+- Transparency: Overlay export must retain full alpha (no background).
+- Consistency: Colors and stroke widths are canonical—do not modify.
+- Minimal Variant: A labels‑free overlay variant may omit Section 3 labels for distraction‑free composition.
 
 ---
 
