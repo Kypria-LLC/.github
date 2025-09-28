@@ -1,0 +1,91 @@
+name: 👑 Temple Ledger Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "migrations/**"
+      - "policy/**"
+      - "materialized_views/**"
+      - ".github/workflows/temple-ledger-deploy.yml"
+  workflow_dispatch:
+
+env:
+  SUPABASE_STAGING_REF: ${{ secrets.SUPABASE_STAGING_REF }}
+  SUPABASE_PRODUCTION_REF: ${{ secrets.SUPABASE_PRODUCTION_REF }}
+  SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+  DISCORD_WEBHOOK_DEPLOYMENTS: ${{ secrets.DISCORD_WEBHOOK_DEPLOYMENTS }}
+  DISCORD_WEBHOOK_ALERTS: ${{ secrets.DISCORD_WEBHOOK_ALERTS }}
+
+jobs:
+  validate-and-deploy:
+    name: Validate & Deploy Schema
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Supabase CLI
+        run: npm install -g supabase
+
+      - name: Validate schema (staging)
+        run: supabase db lint --project-ref "$SUPABASE_STAGING_REF" --db-url "postgresql://postgres:${SUPABASE_SERVICE_KEY}@db.${SUPABASE_STAGING_REF}.supabase.co:5432/postgres"
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+      - name: Deploy to staging
+        run: supabase db push --project-ref "$SUPABASE_STAGING_REF" --db-url "postgresql://postgres:${SUPABASE_SERVICE_KEY}@db.${SUPABASE_STAGING_REF}.supabase.co:5432/postgres"
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+      - name: Refresh materialized views (staging)
+        run: supabase db execute --project-ref "$SUPABASE_STAGING_REF" --file materialized_views/refresh_all.sql
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+      - name: Apply security policies (staging)
+        run: supabase db execute --project-ref "$SUPABASE_STAGING_REF" --file policy/apply_policies.sql
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+      - name: Discord notification (staging success)
+        if: success()
+        run: |
+          curl -X POST "$DISCORD_WEBHOOK_DEPLOYMENTS" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\":\"✅ Temple Ledger deployed to STAGING: $GITHUB_REPOSITORY@$GITHUB_SHA\"}"
+
+      - name: Deploy to production
+        run: supabase db push --project-ref "$SUPABASE_PRODUCTION_REF" --db-url "postgresql://postgres:${SUPABASE_SERVICE_KEY}@db.${SUPABASE_PRODUCTION_REF}.supabase.co:5432/postgres"
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+      - name: Refresh materialized views (production)
+        run: supabase db execute --project-ref "$SUPABASE_PRODUCTION_REF" --file materialized_views/refresh_all.sql
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+      - name: Apply security policies (production)
+        run: supabase db execute --project-ref "$SUPABASE_PRODUCTION_REF" --file policy/apply_policies.sql
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+      - name: Discord notification (production success)
+        if: success()
+        run: |
+          curl -X POST "$DISCORD_WEBHOOK_DEPLOYMENTS" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\":\"👑 Temple Ledger deployed to PRODUCTION: $GITHUB_REPOSITORY@$GITHUB_SHA\"}"
+
+      - name: Discord alert (failure)
+        if: failure()
+        run: |
+          curl -X POST "$DISCORD_WEBHOOK_ALERTS" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\":\"🚨 Temple Ledger deploy FAILED: $GITHUB_REPOSITORY@$GITHUB_SHA\"}"
