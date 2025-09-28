@@ -1,4 +1,4 @@
-# 🏛️ Kypria LLC — Basilica Gate of the Living Canon
+🏛️ Kypria LLC — Basilica Gate of the Living Canon
 
 <!--
   Kypria Parchment & Gold Layout (GitHub-safe rendition)
