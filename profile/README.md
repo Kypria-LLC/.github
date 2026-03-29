@@ -29,6 +29,12 @@ A self-sustaining mythic ecosystem where AI-generated lore, sacred infrastructur
 - ☕ [Ko-fi](https://ko-fi.com/alexandros_thomson)
 - 🌐 [kypriatechnologies.org](https://kypriatechnologies.org)
 
+### Discover Your Archetype
+
+> Seven questions. One primordial identity. Yours has always been there.
+
+[![Take the Mythic Persona Quiz](https://img.shields.io/badge/Take_the_Quiz-%23d4af37?style=for-the-badge)](https://kypriatechnologies.org/demos/mythic-persona-quiz/)
+
 ---
 
 <div align="center">
